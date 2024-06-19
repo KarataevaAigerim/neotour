@@ -1,0 +1,47 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// .App {
+//   font-size: 16px;
+//   margin: 0 auto;
+//   width: 100%;
+// }
+
+@font-face {
+    font-family: "Satoshi";
+    src: local("Satoshi"),
+      url(./components/styles/fonts/Satoshi-Regular.otf) format("opentype");
+  }
+ @font-face {
+  font-family: "Satoshi";
+  font-style: medium;
+  font-weight: 500;
+  src: local("Satoshi"),
+    url(./components/styles/fonts/Satoshi-Medium.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Satoshi";
+  font-style: bold;
+  font-weight: 700;
+  src: local("Satoshi"),
+    url(./components/styles/fonts/Satoshi-Bold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Satoshi";
+  font-style: black;
+  src: local("Satoshi"),
+    url(./components/styles/fonts/Satoshi-Black.otf) format("opentype");
+} 
+
+
+body {
+    margin: 0;
+    font-family: 'Satoshi', sans-serif;;
+}
+  
