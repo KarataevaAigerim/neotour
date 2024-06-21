@@ -29,10 +29,4 @@ const LandingPage = () => {
   
   export default LandingPage;
 
-// button to jump to a new page 
-        // <button className={styles.btn}>
-        //   <Link to="/discover" className={styles.link}>
-        //     Let's Go!
-        //   </Link>
-        // </button>
      
