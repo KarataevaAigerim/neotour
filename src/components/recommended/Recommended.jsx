@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './recommended.module.scss';
 import image from '../styles/images/image 5.png';
+import { Link } from 'react-router-dom';
 
 const trips = [
   { name: 'Trip 1', img: image },
@@ -23,10 +24,12 @@ const Recommended = () => {
       <h1 className={styles.h1}>Recommended</h1>
       <div className={styles.grid}>
         {trips.map((trip, index) => (
-          <div key={index} className={styles.card}>
-            <img src={trip.img} alt={trip.name} className={styles.image} />
-            <h3 className={styles.h3}>{trip.name}</h3>
-          </div>
+            <Link to="/tour">
+            <div key={index} className={styles.card}>
+                <img src={trip.img} alt={trip.name} className={styles.image} />
+                <h3 className={styles.h3}>{trip.name}</h3>
+            </div>
+            </Link>
         ))}
       </div>
     </div>
