@@ -3,6 +3,7 @@ import './App.scss';
 import LandingPage from './components/landing page/LandingPage';
 import Discover from './components/discover/Discover';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Recommended from './components/recommended/Recommended';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
             <>
               <LandingPage />
               <Discover />
+              <Recommended/>
             </>
           } 
         />
@@ -24,10 +26,7 @@ const App = () => {
 
 export default App;
 
-// import './App.scss';
-// import LandingPage from './components/landing page/LandingPage';
-// import Discover from './components/discover/Discover';
-// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 
 // const App = () => {
 //   return (
@@ -39,7 +38,5 @@ export default App;
 //     </Router>
 //   );
 // };
-
-// export default App;
 
 // use this for jumping to a different page

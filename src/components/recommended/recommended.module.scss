@@ -1,0 +1,59 @@
+.main {
+    padding: 30px;
+    margin: 65px;
+  }
+  
+  .h1 {
+    text-align: start;
+    margin-bottom: 50px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    
+  }
+
+  .card {
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    width: 280px;
+    height: 250px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 30px;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+  }
+
+  .card:hover .image {
+    filter: brightness(0.9); 
+  }
+
+    
+  
+  .image {
+    width: 100%;
+    height: auto;
+  }
+
+
+  .h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    width: 100%; 
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px; 
+    margin: 0; 
+    font-size: 1.2em;
+    text-align: left; 
+    border-bottom-left-radius: 15px; 
+    border-bottom-right-radius: 15px; 
+  }

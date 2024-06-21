@@ -1,5 +1,4 @@
 import React from 'react';
-// import mountainImage from '../styles/images/image.png';
 import character from '../styles/svg/Character.svg';
 import styles from './landingPage.module.scss';
 
