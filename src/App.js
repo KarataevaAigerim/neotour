@@ -5,6 +5,7 @@ import Discover from './components/discover/Discover';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Recommended from './components/recommended/Recommended';
 import Tour from './components/tour/Tour';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   return (
