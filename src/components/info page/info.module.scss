@@ -15,3 +15,27 @@
     width: 100%;
     // max-width: 300px;
 }
+
+
+.custom_modal .modal-content {
+    border-radius: 15px;
+  }
+  
+  
+  
+  .people_control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .submit_btn {
+    background-color: #6A62B7;
+    color: #fff;
+  }
+
+
+.comments_input {
+    border-radius: 25px;
+}
