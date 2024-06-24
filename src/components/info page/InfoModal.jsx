@@ -34,7 +34,9 @@ const InfoModal = () => {
         onHide={handleClose}
         backdrop="static"
         keyboard={false}
+        centered={true}
         dialogClassName={styles.custom_modal}
+        contentClassName={styles.custom_modal}
       >
         <Modal.Header closeButton>
           <Modal.Title>Info</Modal.Title>
@@ -43,17 +45,20 @@ const InfoModal = () => {
           <p>To submit an application for a tour, please fill out the form below. We will be in touch with you shortly. </p>
           <Form>
             <Form.Group controlId="formPhoneNumber">
-              <Form.Label>Phone Number</Form.Label>
+              <Form.Label className={styles.phone_label}>Phone Number</Form.Label>
               <PhoneInput
                 country={'kg'}
                 value={phone}
                 onChange={(phone) => setPhone(phone)}
                 region ={'asia'}
                 preferredCountries={['kg', 'kz', 'ru']}
+                countryCodeEditable={false}
+                inputClass={styles.phone_input}
+                buttonClass={styles.phone_btn}
               />
             </Form.Group>
             <Form.Group controlId="formComments">
-              <Form.Label>Comments</Form.Label>
+              <Form.Label className={styles.comments_label}>Comments</Form.Label>
               <Form.Control
                 as="textarea"
                 rows={1}
@@ -63,12 +68,13 @@ const InfoModal = () => {
               />
             </Form.Group>
             <Form.Group controlId="formPeople">
-              <Form.Label>Number of People</Form.Label>
+              <Form.Label className={styles.ppl_label}>Number of People</Form.Label>
               <div className={styles.people_control}>
                 <Button
                   variant="secondary"
                   onClick={() => handlePeopleChange(-1)}
                   disabled={people <= 1}
+                  className={styles.people_btn}
                 >
                   -
                 </Button>
@@ -77,6 +83,7 @@ const InfoModal = () => {
                   variant="secondary"
                   onClick={() => handlePeopleChange(1)}
                   disabled={people >= 6}
+                  className={styles.people_btn}
                 >
                   +
                 </Button>
@@ -93,5 +100,7 @@ const InfoModal = () => {
     </>
   );
 };
+
+
 
 export default InfoModal;

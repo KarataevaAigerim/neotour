@@ -1,41 +1,79 @@
-.btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;        
-}
+
 .book_btn {
     background: #6A62B7;
     color: #fff;
     padding: 16px 40px;
     border: none;
-    border-radius: 25px;
+    border-radius: 50px;
     font-size: 20px;
     font-weight: 500;
     cursor: pointer;
     width: 100%;
-    // max-width: 300px;
 }
 
 
-.custom_modal .modal-content {
-    border-radius: 15px;
+.comments_input {
+    border-radius: 25px !important;
+    height: 40px !important;
+}
+
+.phone_input {
+    border-radius: 25px !important;
+    width: 100% !important;
+    border: solid 1px #dee2e6 !important;
+    height: 40px !important;
+}
+.phone_btn {
+    border-radius: 25px 0 0 25px !important;
+    border: solid 1px #dee2e6 !important;
+    height: 40px;
+}
+
+.phone_label {
+    color: gray;
+}
+
+.comments_label {
+    color: gray;
+    margin-top: 10px;
+}
+
+.ppl_label {
+    color: gray;
+    margin-top: 10px;
+}
+
+.people_btn {
+    color: #fff;
+    background-color: #6A62B7 !important;
+}
+
+
+.custom_modal {
+    border-radius: 25px !important;
+    padding: 20px !important;
   }
-  
-  
-  
-  .people_control {
+
+.people_control {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-  }
-  
-  .submit_btn {
-    background-color: #6A62B7;
+}
+
+.submit_btn {
+    background-color: #6A62B7 !important;
     color: #fff;
-  }
+    margin: 0 auto;
+    align-items: center !important ;
+    outline: none !important;
+    border: none !important;
+    width: 100% !important;
+    text-align: center !important;
+    border-radius: 25px !important;
+    height: 40px !important;
+}
 
-
-.comments_input {
-    border-radius: 25px;
+.submit_btn:hover {
+    background-color: #a39fc2 !important;
 }
