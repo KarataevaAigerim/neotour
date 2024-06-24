@@ -1,5 +1,4 @@
-import React from "react";
-// import React, { useState } from 'react';
+import React, { useEffect } from "react";
 import styles from "./tour.module.scss";
 import mountain from '../styles/images/image.png';
 import pin from '../styles/svg/u_map-marker.svg';
@@ -8,6 +7,9 @@ import avatar from '../styles/images/avatar.png';
 import InfoModal from "../info page/InfoModal";
 
 const Tour = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0); // чтобы страница не скроллилась вниз
+      }, []);
   return (
     <div className={styles.main}>
         <div className={styles.main_image}>
