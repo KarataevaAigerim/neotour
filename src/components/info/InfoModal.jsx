@@ -4,12 +4,21 @@ import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import PhoneInput from 'react-phone-input-2';
 import styles from './info.module.scss';
+import ConfirmationModal from '../confirmation/ConfirmationModal';
 
 const InfoModal = () => {
   const [show, setShow] = useState(false);
   const [phone, setPhone] = useState('');
   const [comments, setComments] = useState('');
   const [people, setPeople] = useState(1);
+  const [showModal, setShowModal] = useState(false);
+
+  const handleShowModal = () => {
+    setShow(false); // Close InfoModal
+    setShowModal(true); // Show ConfirmationModal
+  };
+
+  const handleCloseModal = () => setShowModal(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -42,7 +51,7 @@ const InfoModal = () => {
           <Modal.Title>Info</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p>To submit an application for a tour, please fill out the form below. We will be in touch with you shortly. </p>
+          <p>To submit an application for a tour, please fill out the form below. We will be in touch with you shortly.</p>
           <Form>
             <Form.Group controlId="formPhoneNumber">
               <Form.Label className={styles.phone_label}>Phone Number</Form.Label>
@@ -50,7 +59,7 @@ const InfoModal = () => {
                 country={'kg'}
                 value={phone}
                 onChange={(phone) => setPhone(phone)}
-                region ={'asia'}
+                region={'asia'}
                 preferredCountries={['kg', 'kz', 'ru']}
                 countryCodeEditable={false}
                 inputClass={styles.phone_input}
@@ -92,15 +101,15 @@ const InfoModal = () => {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="primary" className={styles.submit_btn}>
+          <Button variant="primary" onClick={handleShowModal} className={styles.submit_btn}>
             Submit
           </Button>
         </Modal.Footer>
       </Modal>
+
+      <ConfirmationModal show={showModal} handleClose={handleCloseModal} />
     </>
   );
 };
-
-
 
 export default InfoModal;

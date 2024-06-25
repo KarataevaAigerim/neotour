@@ -4,7 +4,7 @@ import mountain from '../styles/images/image.png';
 import pin from '../styles/svg/u_map-marker.svg';
 import { Link } from "react-router-dom";
 import avatar from '../styles/images/avatar.png';
-import InfoModal from "../info page/InfoModal";
+import InfoModal from "../info/InfoModal";
 
 const Tour = () => {
     useEffect(() => {
