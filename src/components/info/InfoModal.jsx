@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
@@ -12,6 +12,7 @@ const InfoModal = () => {
   const [comments, setComments] = useState('');
   const [people, setPeople] = useState(1);
   const [showModal, setShowModal] = useState(false);
+  const [isFormValid, setIsFormValid] = useState(false);
 
   const handleShowModal = () => {
     setShow(false); // Close InfoModal
@@ -31,6 +32,18 @@ const InfoModal = () => {
       return newPeople;
     });
   };
+
+  const validateForm = () => {
+    if (phone && comments && people > 0) {
+      setIsFormValid(true);
+    } else {
+      setIsFormValid(false);
+    }
+  };
+
+  useEffect(() => {
+    validateForm();
+  }, [phone, comments, people]);
 
   return (
     <>
@@ -101,7 +114,12 @@ const InfoModal = () => {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="primary" onClick={handleShowModal} className={styles.submit_btn}>
+          <Button
+            variant="primary"
+            onClick={handleShowModal}
+            className={styles.submit_btn}
+            disabled={!isFormValid}
+          >
             Submit
           </Button>
         </Modal.Footer>
