@@ -62,7 +62,7 @@ const Discover = () => {
       </div>
       <div className={styles.tabcontent}>
         {tours.slice(0, 3).map((tour, index) => (
-          <Link to="/tour" key={index}>
+          <Link to={`/tour/${tour.id}`} key={index}>
             <div className={styles.card}>
               <img src={tour.thumbnail} alt={tour.name} className={styles.image} />
               <h2 className={styles.h2}>{tour.name}</h2>
