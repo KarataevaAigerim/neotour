@@ -40,8 +40,22 @@
   
   .tab button.active {
     color: #6A62B7;
+    font-weight: 500;
   }
-  
+
+  // .tab button.active::after {
+  //   display: block;
+  //   content: "";
+  //   width: 8px;
+  //   height: 8px;
+  //   border-radius: 90px;
+  //   background: #6a62b7;
+  //   transform: translateX(-50%);
+  //   position:sticky;
+  //   left: 50%;
+  //   bottom: -10px;
+  // }
+
   .tabcontent {
     display: flex;
     flex-wrap: wrap;

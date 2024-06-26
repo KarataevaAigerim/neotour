@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
@@ -33,17 +33,17 @@ const InfoModal = () => {
     });
   };
 
-  const validateForm = () => {
+  const validateForm = useCallback (() => {
     if (phone && comments && people > 0) {
       setIsFormValid(true);
     } else {
       setIsFormValid(false);
     }
-  };
+  },[phone, comments, people]);
 
   useEffect(() => {
     validateForm();
-  }, [phone, comments, people]);
+  }, [validateForm]);
 
   return (
     <>
