@@ -63,7 +63,7 @@ const Tour = () => {
             </div>
           ))}
         </div>
-        <InfoModal />
+        <InfoModal tourId={tour.id} tourName={tour.name} />
       </div>
     </div>
   );

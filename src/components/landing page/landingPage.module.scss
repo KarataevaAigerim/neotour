@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: 'Satoshi', sans-serif;
-    background-image: linear-gradient(180deg, #D0CBFF 0%, rgba(208, 203, 255, 0.00) 100%);
+    // background-image: linear-gradient(180deg, #cbd9ff 0%, rgba(208, 203, 255, 0.00) 100%);
     min-height: 100vh; 
   }
   
@@ -17,14 +17,16 @@ body {
     display: flex;
     flex-direction: column;
     padding: 80px;
+    margin: 15px 0;
     
 }
 .h1 {
     color:  #141414;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-size: 90px;
+    font-size: 70px;
     line-height: 110px;
     font-weight: 700;
+    margin-top: 50px;
 }
 
 .h3 {
@@ -34,6 +36,7 @@ body {
     line-height: 38px;
     margin-top: 50px;
     font-weight: 300;
+    margin-bottom: 50px;
 }
 
 .btn {
@@ -45,21 +48,21 @@ body {
     width: 200px;
     height: 50px;
     border-radius: 25px;
-    background-color: #6A62B7;
+    background-color: #056dc9;
     cursor: pointer;
     text-align: center;
     margin-top: 50px;
 }
 
 .btn:hover {
-    background-color: #5a52a7; /* Slightly darker color */
+    background-color: #0086FF; /* Slightly darker color */
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow */
   }
 
 .img {
     display: flex;
-    width: 550px;
-    height: 450px;
+    width: 650px;
+    height: 550px;
     justify-content: center;
     flex-shrink: 0;
     margin: 25px;
