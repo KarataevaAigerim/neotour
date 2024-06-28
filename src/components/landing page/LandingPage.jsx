@@ -21,7 +21,7 @@ const LandingPage = () => {
             <button className={styles.btn} onClick={scrollToDiscover}>Let's Go!</button>
         </div>
         <div className={styles.img}>
-        <img src= {person} alt="character" />
+        <img src= {character} alt="character" />
         </div>
       </div>
     );
