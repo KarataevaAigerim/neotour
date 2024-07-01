@@ -1,9 +1,6 @@
 import React from 'react';
 import character from '../styles/svg/Character.svg';
-import green from '../styles/images/green.jpg';
 import styles from './landingPage.module.scss';
-import person from '../styles/images/illustration-hiker-tourists-hiking-hand-drawn-illustration-line-art-doodle-style_73637-1049.avif'
-
 
 const LandingPage = () => {
     const scrollToDiscover = () => {

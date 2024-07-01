@@ -69,7 +69,7 @@ const InfoModal = ({ tourId, tourName }) => {
         number_of_people: people
       };
   
-      console.log('Request payload:', payload); // Add this log to inspect the payload
+      console.log('Request payload:', payload); // Add this log to inspect the payload, это для теста создания букингов
   
       const response = await fetch('https://muha-backender.org.kg/create-booking/', {
         method: 'POST',
